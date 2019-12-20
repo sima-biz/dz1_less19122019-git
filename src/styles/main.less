@@ -3,58 +3,181 @@ Write all less code in this file
 Import another styles from less files using @import "[NAME_OF_FILE].less"
 */
 // Example styles
-@font-face {
-  font-family: "christmas";
-  src: url("../fonts/christmaseve.ttf");
-}
+@import "main0.less";
+@import "main1.less";
+@import "main2.less";
+@import "main-media.less";
+// body {
+//   margin: 0 auto;
+//   max-width: 1260px;
+  // header {
+  //   background: url('../images/background.png');
+  //   display: flex;
+  //   flex-direction: column;
+  //   min-height: 600px;
+  //   width: 100%;
+  //   max-width: 1260px;
+  //   justify-content: space-around;
+  //   nav {
+  //     display: flex;
+  //     justify-content: space-around;
+  //     align-items: center;
+  //     >a {
+  //       color: white;
+  //       font-size: 25px;
+  //       font-weight: bold;
+  //       text-decoration: none;
+  //       img {
+  //         padding-right: 15px;
+  //         vertical-align: middle;
+  //       }
+  //     }
+  //     .logo:hover img {
+  //       opacity: 0.6;
+  //     }
+  //     menu {
+  //       list-style: none;
+  //       text-transform: uppercase;
+  //       display: flex;
+  //       li {
+  //         padding-left: 15px;
+  //         a {
+  //           color: white;
+  //           font-size: 20px;
+  //           text-decoration: none;
+  //           &:hover {
+  //             color: #fc635e;
+  //             border-bottom: #fc635e solid 5px;
+  //             padding-bottom: 3px;
+  //           }
+  //         }
+  //       }
+  //     }
+      
+  //   }
+  //   .mainText {
+  //     text-align: center;
+  //     h1 {
+  //       text-transform: uppercase;
+  //       font-size: 50px;
+  //       span {
+  //         color: #fc635e;
+  //       }
+  //     }
+  //     p {
+  //       color: white;
+  //       font-size: 22px;
+  //     } 
+  //     a {
+  //       color: #fc635e;
+  //       text-decoration: none;
+  //       font-size: 22px;
+  //       border: 2px solid #fc635e;
+  //       padding: 12px 28px;
+  //       border-radius: 8px;
+  //       &:hover {
+  //         background: #fc635e;
+  //         color: white;
+  //       }  
+  //     } 
+  //   }
+  //   .botHeader {
+  //     display: flex;
+  //     justify-content: center;
+  //     a {
+  //       font-size: 30px;
+  //       text-decoration: none;
+  //       color: white;
+  //       border-radius: 50%;
+  //       background: #fc635e;
+  //       display: flex;
+  //       width: 45px;
+  //       height: 45px;
+  //       justify-content: center;
+  //       &:hover {
+  //         opacity: 0.7;
+  //       }
+  //     }
 
-@bgColor: grey;
-@headerColor: #373333;
+  //   }
+  // }
 
-@size: 40px;
-@family: "christmas";
+  
 
-.baseBodyStyles() {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
+  // .recive {
+  //   margin-top: 0;
+  //   text-align: center;
+  //   background: white;
+  //   padding: 70px 50px 10px 50px;
+  //   color: #868686;
+  //   p {
+  //     font-size: 22px;
+  //     margin-bottom: 50px;
+  //   }
+  //   h1 {
+  //     text-decoration: underline;
+  //     margin: 0;
+  //     text-transform: uppercase;
+  //     font-size: 40px;
+  //     span {
+  //       color: #fc635e;
+  //     }
+  //   }
+    // a.arrowDown {
+    //   font-size: 30px;
+    //   text-decoration: none;
+    //   color: #fc635e;
+    //   border: 1px solid #fc635e;
+    //   display: flex;
+    //   justify-content: center;
+    //   margin: 0 auto;
+    //   border-radius: 50%;
+    //   width: 45px;
+    //   height: 45px;
+    //   &:hover {
+    //     background: #fc635e;
+    //     color: white;
+    //   }
+    // }
+  // }
+  // .icons {
+  //   display: flex;
+  //   h3 {
+  //     text-decoration: underline;
+  //     text-transform: uppercase;
+  //   }
+  //   p {
+  //     font-size: 18px;
+  //   }
+  //   div {
+  //     padding: 15px;
+  //   }
+  // }
+// }
 
-.flex(@direction) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: @direction;
-}
-
-body {
-  .flex(column);
-  .baseBodyStyles();
-  background: @bgColor;
-
-  & > * {
-    font-size: @size;
-  }
-  & img {
-    border: 0.5px solid rgba(0, 0, 0, 0.5);
-    height: 250px;
-    width: 500px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 21px 30px #5c5656;
-  }
-
-  & h1 {
-    .flex(row);
-    font-family: @family;
-    color: @headerColor;
-  }
-}
-
-.main_body {
-  &_text {
-    font-size: 35px;
-    font-family: @family;
-  }
-}
+// @media screen and (max-width: 768px) and (min-width: 550px) {
+//   body {
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// }
+// @media screen and (max-width: 549px) {
+//   nav {
+//     padding: 0px 20px;
+//   }
+//   menu {
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   menu li {
+//     margin-bottom: 10px;
+//   }
+//   body header .mainText h1 {
+//     font-size: 40px;
+//     margin-top: -20px;
+//   }
+//   body header .mainText p {
+//     font-size: 18px;
+//     padding-bottom: 20px;
+//   }
+// }
